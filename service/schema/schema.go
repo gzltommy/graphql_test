@@ -9,7 +9,7 @@ import (
 
 // 定义跟查询节点
 var rootQuery = graphql.NewObject(graphql.ObjectConfig{
-	Name: "RootQuery",
+	Name:        "RootQuery",
 	Description: "Root Query",
 	Fields: graphql.Fields{
 		"hello": &queryHello, // queryHello 参考 schema/hello.go

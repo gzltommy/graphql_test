@@ -6,12 +6,12 @@ package graphql
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/graphql-go/handler"
-	"graphql_test/schema"
+	schema2 "graphql_test/service/schema"
 )
 
 func GraphqlHandler() gin.HandlerFunc {
 	h := handler.New(&handler.Config{
-		Schema:   &schema.Schema,
+		Schema:   &schema2.Schema,
 		Pretty:   true,
 		GraphiQL: true,
 	})

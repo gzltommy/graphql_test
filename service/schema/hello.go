@@ -2,7 +2,7 @@
 package schema
 
 import (
-	"graphql_test/model"
+	model2 "graphql_test/service/model"
 
 	"github.com/graphql-go/graphql"
 )
@@ -46,6 +46,6 @@ var queryHello = graphql.Field{
 		name, _ := p.Args["name"].(string)
 
 		// 调用 Hello 这个 model 里面的 Query 方法查询数据
-		return (&model.Hello{}).Query(id, name)
+		return (&model2.Hello{}).Query(id, name)
 	},
 }
